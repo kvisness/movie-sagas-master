@@ -8,8 +8,8 @@ app.use(bodyParser.json()); // needed for angular requests
 app.use(express.static('build'));
 
 /** ---------- ROUTES ---------- **/
-const genreRouter = require('./routes/genreRouter');
-const movieRouter = require('./routes/movieRouter');
+const genreRouter = require('./Routes/genreRouter');
+const movieRouter = require('./Routes/movieRouter');
 app.use('/genre', genreRouter);//this path is my choice
 app.use('/movie', movieRouter);//this path is my choice
 /** ---------- START SERVER ---------- **/

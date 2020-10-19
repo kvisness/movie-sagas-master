@@ -1,7 +1,8 @@
-import Axios from 'axios';
+
 import React, { Component } from 'react';
 import './App.css';
 import axios from 'axios';
+import HomePage from '../HomePage';
 
 class App extends Component {
 
@@ -24,7 +25,8 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <p>Empty Page</p>
+        
+        <HomePage/>
       </div>
     );
   }

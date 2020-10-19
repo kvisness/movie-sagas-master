@@ -15,7 +15,11 @@ render(){
         <>
         <h1>Home Page</h1>
         <div>
-            {/*THIS IS WHERE ALL THE MOVIES SHOW*/}
+            <ul>
+                {this.props.movies.map((oneMovie)=>{
+                    return <li>{oneMovie.title} <img src={oneMovie.poster}></img></li>
+                })}{/*param is only one part of the array */}
+            </ul>
                 {/*THIS needs to link to the DETAILS page*/}
         </div>
         </>
@@ -23,4 +27,8 @@ render(){
 }
 
 }
-export default connect ()(HomePage);
+const mapReduxStateToProps = (globalStore) => ({
+    movies: globalStore.movies
+});
+
+export default connect(mapReduxStateToProps)(HomePage);
