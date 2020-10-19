@@ -14,7 +14,7 @@ import { put, takeEvery } from 'redux-saga/effects';
 
 // Create the rootSaga generator function
 function* rootSaga() { //action.type-----saga 
-    yield takeEvery("GET_MOVIE_LIST", movieListSaga)//this action was my choice as well as the name of the saga.
+    yield takeEvery("GET_MOVIE_LIST", movieListSaga)//this action.type was my choice as well as the name of the saga.
     yield takeEvery("GET_GENRE_LIST", genreListSaga)
 }
 
@@ -45,14 +45,22 @@ const sagaMiddleware = createSagaMiddleware();
 
 // Used to store movies returned from the server
 const movies = (state = [], action) => {
-    switch (action.type) {
-        case 'SET_MOVIES':
+    switch (action.type) {//switch is like "if statement"
+        case 'SET_MOVIES'://case is the ===
+            return action.payload;
+        default:
+            return state;
+    }// same as saying
+    //if(action.type === 'SET_MOVIES"){return action.payload} else{ return state;}
+}
+const oneMovie = (state = [], action) => {
+    switch (action.type) {//switch is like "if statement"
+        case 'ONE_MOVIE'://case is the ===
             return action.payload;
         default:
             return state;
     }
 }
-
 // Used to store the movie genres
 const genres = (state = [], action) => {
     switch (action.type) {
@@ -68,6 +76,7 @@ const storeInstance = createStore(
     combineReducers({
         movies,
         genres,
+        oneMovie
     }),
     // Add sagaMiddleware to our store
     applyMiddleware(sagaMiddleware, logger),
