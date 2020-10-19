@@ -38,14 +38,15 @@ Genres can be applied to many different movies. Movies can have multiple genres.
 
 ### Home / List Page
 
-This should display all of the movies in the movie database. When a movie poster is clicked, a user should be brought to the `/details` view.
+XXX--This should display all of the movies in the movie database. When a movie poster is clicked, a user should be brought to the `/details` view.
 
 ### Details Page
 
-This should show all details **including genres**, for the selected movie.
+XX--This should show all details **including genres**, for the selected movie.
+//had to use conditional rendering unless there is a better way?
 
 The details page should have the buttons:
-
+//buttons are added, just need to hook them up.
 - `Back to List` button, which should bring the user to the Home Page
 - `Edit` button, which should bring the user to the Edit Page
 
@@ -55,8 +56,8 @@ The details page should have the buttons:
 
 This should show:
 
-- an input field (for changing the movie title), for the selected movie.
-- a textarea (for changing the movie description)
+X an input field (for changing the movie title), for the selected movie.
+X a textarea (for changing the movie description)
 
 The edit page should have the buttons:
 

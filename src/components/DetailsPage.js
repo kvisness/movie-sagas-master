@@ -7,6 +7,8 @@ class DetailsPage extends Component {
 
     filteredMovie = this.props.genres.filter((movieIndex) => //one movie is the object with the keys inside
         movieIndex.id === this.props.oneMovie.id)
+
+
     render() {
 
         return (
