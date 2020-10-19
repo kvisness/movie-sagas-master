@@ -11,10 +11,18 @@ import logger from 'redux-logger';
 import createSagaMiddleware from 'redux-saga';
 
 // Create the rootSaga generator function
-function* rootSaga() {
+function* rootSaga() { //action.type-----saga 
+    yield takeEvery("GET_MOVIE_LIST", movieListSaga)//this action was my choice as well as the name of the saga.
 
 }
 
+function* movieListSaga(action){
+    try{
+
+    }catch(error){
+        console.log('Error getting movie list from movieListSaga', error);
+    }
+}
 // Create sagaMiddleware
 const sagaMiddleware = createSagaMiddleware();
 
