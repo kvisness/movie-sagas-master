@@ -1,6 +1,6 @@
 # React-Redux with Sagas
 
-> **PLEASE COMMENT YOUR CODE.** Do not clone this repository. Instead, download the zip, extract the contents, `git init`, `git add .`, `git commit -m "initial commit - base project"` and add your remote. Please do this before you leave for the day.
+X-> **PLEASE COMMENT YOUR CODE.** Do not clone this repository. Instead, download the zip, extract the contents, `git init`, `git add .`, `git commit -m "initial commit - base project"` and add your remote. Please do this before you leave for the day.
 
 For this weekend challenge you'll be building a movie application!
 We'll be able to see movies that exist in our DB. We'll also be able to see detailed view for each individual movie, including genres associated with that movie. We'll also be able to edit our movie's information.
@@ -11,15 +11,15 @@ We'll be able to see movies that exist in our DB. We'll also be able to see deta
 
 ## Database Setup
 
-1. Create a database named `saga_movies_weekend`
-2. Run the queries from `database.sql` on the `saga_movies_weekend` database.
+X-X-1. Create a database named `saga_movies_weekend`
+X. Run the queries from `database.sql` on the `saga_movies_weekend` database.
 3. You will need to create the junction table between the `movies` and `genres` tables!
 
 ## Install Dependencies
 
-1. `npm install`
-2. `npm run server`
-3. `npm run client`
+X-1. `npm install`
+X-2. `npm run server`
+X-3. `npm run client`
 
 ## Notes
 
