@@ -21,7 +21,7 @@ class DetailsPage extends Component {
                     <div>
                         <p>{this.props.oneMovie.title}{this.props.oneMovie.description} <img src={this.props.oneMovie.poster} alt=''></img></p>
                     </div>
-                    <NavLink to="/">Go to HOME</NavLink>{/*THIS needs to link to the HOME page*/}
+                    <NavLink to="/">Back to List</NavLink>{/*THIS needs to link to the HOME page*/}
                     <br />
                     <NavLink to="/edit">Edit page</NavLink>{/*THIS needs to link to the EDIT page*/}
                     <ul>
