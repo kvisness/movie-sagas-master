@@ -16,6 +16,7 @@ import { put, takeEvery } from 'redux-saga/effects';
 function* rootSaga() { //action.type-----saga 
     yield takeEvery("GET_MOVIE_LIST", movieListSaga)//this action.type was my choice as well as the name of the saga.
     yield takeEvery("GET_GENRE_LIST", genreListSaga)
+    yield takeEvery("EDIT_MOVIE", editMovieSaga);
 }
 
 function* movieListSaga(action){//when this get is done it comes back as the response
@@ -38,6 +39,17 @@ function* genreListSaga(action) {//when this get is done it comes back as the re
         })
     } catch (error) {
         console.log('Error getting genre list from genreListSaga', error);
+    }
+}
+function* editMovieSaga(action) {//when this get is done it comes back as the response
+    try {
+        const response = yield axios.put('/movie', action.payload);
+        yield put({//yield means do this code behind yield//put is like this.props.dispatch
+            type: 'SET_MOVIES',
+            payload: response.data//this is what the server sent back
+        })
+    } catch (error) {
+        console.log('Error EDITING MOVIE from editMovieSaga', error);
     }
 }
 // Create sagaMiddleware

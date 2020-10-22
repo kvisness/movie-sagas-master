@@ -21,7 +21,7 @@ class SingleMovie extends Component {
             <>
                 
                 <div>
-                     <li>{this.props.oneMovie.title} <img src={this.props.oneMovie.poster}></img><button onClick={this.click}>Read More</button></li>
+                     <li>{this.props.oneMovie.title} <img src={this.props.oneMovie.poster} alt=''></img><button onClick={this.click}>Read More</button></li>
                 </div>
             </>
         )
