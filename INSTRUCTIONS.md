@@ -61,14 +61,14 @@ X a textarea (for changing the movie description)
 
 The edit page should have the buttons:
 
-- `Cancel` button, which should bring the user to the Details Page
-- `Save` button, which should update the title and description in the database and bring the user to the Details Page
+X- `Cancel` button, which should bring the user to the Details Page
+X- `Save` button, which should update the title and description in the database and bring the user to the Details Page
 
-> Base functionality does not require the current values (the existing movie title and description) to populate in the input and textarea.
+X> Base functionality does not require the current values (the existing movie title and description) to populate in the input and textarea.
 
-> Base functionality does not require the movie information to load correctly after refresh of the browser.
+X> Base functionality does not require the movie information to load correctly after refresh of the browser.
 
-### General Tasks
+### General Tasks---**** I WILL HAVE TO COME BACK TO THIS AT SOME POINT AND STYLE IT UP.
 
 As one of your last projects, it's possible you will be sharing this with employers, so be sure to follow best practices and make it look good!
 

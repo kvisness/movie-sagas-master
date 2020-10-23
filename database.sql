@@ -11,12 +11,18 @@ CREATE TABLE "genres" (
   "name" VARCHAR(80) NOT NULL
 );
 
+CREATE TABLE "junction"
+(
+  "id" SERIAL PRIMARY KEY,
+  movie_id INT REFERENCES "movies",
+  genre_id INT REFERENCES "genres"
+);
 
--- CREATE JUNCTION TABLE
--- You will need to create the junction table that stores the relationships between "movies" and "genres"
--- This table will need to be populated with some data as well (INSERTS)
--- Recall that this Junction Table will just be a table of ids!
-
+SELECT "movies"."id", array_agg("genres"."name") AS "movie_genres"
+FROM "movies"
+  JOIN "junction" ON "movies"."id" = "junction"."movie_id"
+  JOIN "genres" ON "junction"."genre_id" = "genres"."id"
+GROUP BY "movies"."id";
 
 
 --------[ DATA! ]---------
